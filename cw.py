@@ -105,7 +105,6 @@ def web4(url):
     return tuple(models)
 
 
-
 w1 = web1(LINK + "?currency=USD")
 if w1[0]:
     message = f"Cena zegarka {w1[1]} wynosi {w1[2]} USD. Oczekiwana cena to {LIMIT} USD.\n\n"
