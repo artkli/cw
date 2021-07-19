@@ -1,8 +1,9 @@
+from datetime import date
 import requests
+from datetime import date
 from bs4 import BeautifulSoup
 from telethon.sync import TelegramClient
 
-from h import ID, HASH, TOKEN
 
 
 LINK = "https://www.creationwatches.com/products/orient-watches-252/orient-star-classic-automatic-power-reserve-saf02003w0-mens-watch-10652.html"
@@ -118,6 +119,7 @@ message = message + f"W promocji jest {w2[2]} zegarków. Kody:\n"
 for i in w2[1]:
     message = message + f"\t{i.split(' ')[3]} na {i.split(' ')[12].strip('.')}\n"
 
+print(date.today())
 print(message)
 if w1[2] < LIMIT or w2[0]:
     client = TelegramClient('session', ID, HASH)
